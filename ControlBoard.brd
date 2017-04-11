@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.0125" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.005" altunitdist="inch" altunit="inch"/>
+<grid distance="0.0125" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.0025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -52,7 +52,7 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
@@ -157,7 +157,6 @@
 <wire x1="0" y1="0" x2="90.81" y2="0" width="0.001" layer="20"/>
 <wire x1="90.81" y1="0" x2="90.81" y2="50" width="0.001" layer="20"/>
 <wire x1="90.81" y1="50" x2="28.94" y2="50" width="0.001" layer="20"/>
-<wire x1="28.94" y1="50" x2="11.44" y2="50" width="0.001" layer="20"/>
 <wire x1="11.44" y1="50" x2="0" y2="50" width="0.001" layer="20"/>
 <wire x1="0" y1="50" x2="0" y2="0" width="0.001" layer="20"/>
 <circle x="4.699" y="17.78" radius="0.4445" width="0.001" layer="51"/>
@@ -168,7 +167,6 @@
 <circle x="4.699" y="25.4" radius="0.4445" width="0.001" layer="51"/>
 <circle x="7.239" y="22.86" radius="0.4445" width="0.001" layer="51"/>
 <circle x="7.239" y="25.4" radius="0.4445" width="0.001" layer="51"/>
-<circle x="6.54" y="4" radius="1.6" width="0.001" layer="20"/>
 <circle x="4.699" y="27.94" radius="0.4445" width="0.001" layer="51"/>
 <circle x="4.699" y="30.48" radius="0.4445" width="0.001" layer="51"/>
 <circle x="7.239" y="30.48" radius="0.4445" width="0.001" layer="51"/>
@@ -180,17 +178,18 @@
 <circle x="7.239" y="27.94" radius="0.4445" width="0.001" layer="51"/>
 <circle x="7.239" y="35.56" radius="0.4445" width="0.001" layer="51"/>
 <circle x="7.239" y="38.1" radius="0.4445" width="0.001" layer="51"/>
-<circle x="6.54" y="46" radius="1.6" width="0.001" layer="20"/>
 <circle x="7.239" y="40.64" radius="0.4445" width="0.001" layer="51"/>
-<circle x="12.161990625" y="45.053" radius="0.8" width="0.001" layer="49"/>
-<circle x="13.876990625" y="41.873" radius="1.625" width="0.001" layer="49"/>
-<circle x="85.54" y="4" radius="1.6" width="0.001" layer="20"/>
-<circle x="26.576990625" y="41.873" radius="1.625" width="0.001" layer="49"/>
-<circle x="28.291990625" y="45.053" radius="0.8" width="0.001" layer="49"/>
-<circle x="85.54" y="46" radius="1.6" width="0.001" layer="20"/>
 <wire x1="11.54" y1="19.5" x2="28.94" y2="19.5" width="0.001" layer="20"/>
 <wire x1="28.94" y1="19.5" x2="28.94" y2="50" width="0.001" layer="20"/>
 <wire x1="11.54" y1="19.5" x2="11.44" y2="50" width="0.001" layer="20"/>
+<hole x="6.54" y="46" drill="3.2"/>
+<hole x="6.54" y="4" drill="3.2"/>
+<hole x="85.54" y="4" drill="3.2"/>
+<hole x="85.54" y="46" drill="3.2"/>
+<text x="31.75" y="19.05" size="0.8128" layer="21" rot="R180">University of Pittsburgh
+Robotics and Automation Society
+IARC 2017 Control Board
+Levi Burner</text>
 </plain>
 <libraries>
 <library name="b_keystone_3000k_sm_battery">
@@ -1920,4 +1919,10 @@ Please make sure your boards conform to these design rules.</description>
 </errors>
 </board>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
